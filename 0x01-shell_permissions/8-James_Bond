@@ -1,0 +1,2 @@
+#!/bin/bash
+su chmod 007 hello
