@@ -1,2 +1,2 @@
 #!/bin/bash
-chown hello guillname if u=betty
+chown hello betty if u=guillname
