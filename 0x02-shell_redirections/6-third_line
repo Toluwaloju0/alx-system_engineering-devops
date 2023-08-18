@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f3 iacta
+cut -fs=3 iacta
