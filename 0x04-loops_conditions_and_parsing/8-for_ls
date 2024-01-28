@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# To print file names without the "-"
+
+list=$(ls -Q1)
+
+for i in $list; do
+    awk -F  "-" "$i"
+    echo "${i[2]}"
+done
