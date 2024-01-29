@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# A script to print Best School and other items
+
+a=1
+
+while [ "$a" -le 10 ]; do
+    if [ "$a" -eq 4 ]; then
+        echo bad luck
+        ((a+=1))
+        continue
+    elif [ "$a" -eq 8 ]; then
+        echo good luck
+        ((a+=1))
+        continue
+    else
+        echo Best School
+        ((a+=1))
+    fi
+done

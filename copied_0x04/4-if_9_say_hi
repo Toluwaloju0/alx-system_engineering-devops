@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# a script that prints Hi on the 9th iteration
+a=1
+while [ "$a" -le 10 ]; do
+    echo Best School
+    if [ "$a" -eq 9 ]; then
+        echo Hi
+    fi
+    ((a+=1))
+done

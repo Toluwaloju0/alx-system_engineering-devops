@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# a script to write a FizzBuzz program
+
+for a in {1..100}; do
+    if [ $((a % 15)) -eq 0 ]; then
+        echo FizzBuzz
+        ((a+=1))
+        continue
+    elif [ $((a % 5)) -eq 0 ]; then
+        echo Buzz
+        ((a+=1))
+        continue
+    elif [ $((a % 3)) -eq 0 ]; then
+        echo Fizz
+        ((a+=1))
+        continue
+    else
+        echo $a
+    fi
+    ((a+=1))
+done
