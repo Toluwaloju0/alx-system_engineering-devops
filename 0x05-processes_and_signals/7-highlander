@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# A script that prints for infinity
+a=0
+
+while [ $a -le 1 ]; do
+    echo To infinity and beyond
+    sleep 2
+    if [ $SIGTERM_REQUESTED -eq 0 ]; then
+        echo 'I am invincible!!!'
+    fi
+done
