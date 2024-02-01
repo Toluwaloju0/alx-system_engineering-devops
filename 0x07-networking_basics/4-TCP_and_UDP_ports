@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#A script to print all running ports for tcp
+netstat -pl
