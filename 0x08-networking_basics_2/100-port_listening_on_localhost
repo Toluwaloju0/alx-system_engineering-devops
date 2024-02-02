@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script to open a listening port
+
+sudo nc -l 98
