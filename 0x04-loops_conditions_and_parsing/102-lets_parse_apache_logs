@@ -2,4 +2,4 @@
 # To print the ip and http code of Apache log file
 LOG_FILE="apache-access.log"
 
-awk '{print $1, $10F}' "$LOG_FILE"
+awk '{print $1, $9F}' "$LOG_FILE"
