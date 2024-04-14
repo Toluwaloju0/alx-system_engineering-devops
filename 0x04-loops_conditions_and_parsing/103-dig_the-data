@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# To print the ip and http code of Apache log file
+LOG_FILE="apache-access.log"
+
+awk '{print $42, $1, $9F}' "$LOG_FILE" | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
