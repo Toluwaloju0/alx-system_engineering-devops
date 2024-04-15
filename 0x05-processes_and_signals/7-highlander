@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A script that prints for infinity
 a=0
-trap "echo I am Invicible!!!" SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 while [ $a -le 1 ]; do
     echo To infinity and beyond
     sleep 2
