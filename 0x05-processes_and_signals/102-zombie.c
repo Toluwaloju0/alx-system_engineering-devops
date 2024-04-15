@@ -18,4 +18,5 @@ int main(void)
 		child_pid = fork();
 		printf("Zombie process created, PID: %d\n", child_pid);
 	}
+	return (1);
 }
