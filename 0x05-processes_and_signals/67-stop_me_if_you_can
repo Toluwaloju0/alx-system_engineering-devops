@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#A script to kill without useing kill
+pkill -f 7-highlander
