@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # A script to change ip address
 
-sed '/localhost/s/127.0.0.1/127.0.0.2/' /etc/hosts
+echo "localhost	127.0.0.2" | sed -i -e 'localhost	127.0.0.2' /etc/hosts
 echo '8.8.8.8	facebook.com' | sudo tee -a /etc/hosts
