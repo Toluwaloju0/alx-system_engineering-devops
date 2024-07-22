@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Using ifconfig to list all IPv4 addresses, excluding the loopback address
 
-ifconfig | grep 'inet' | awk '{print $2}' | cut -d: -f2 | grep -v '127.0.0.1'
+ifconfig | grep 'inet' | awk '{print $2}'
