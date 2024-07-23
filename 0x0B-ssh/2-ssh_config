@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-# A script to show my configuration file
-# IdentityFile ~/.ssh/school
-# PasswordAuthentication no
+Host 503789-web-01
+	HostName 100.25.22.54
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
