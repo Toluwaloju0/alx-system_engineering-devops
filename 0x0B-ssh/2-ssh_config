@@ -1,3 +1,4 @@
-#!/isr/bin/env bash
+#!/usr/bin/env bash
 # A script to configure the server so that the passworf wont work again
-ssh-copy-id -i ~/.ssh/school.pub ubuntu@100.25.22.54
+echo 'IdentityFile ~/.ssh/school' > ~/.ssh/ssh_config
+echo 'PasswordAuthentication No' >> ~/.ssh/ssh_config
