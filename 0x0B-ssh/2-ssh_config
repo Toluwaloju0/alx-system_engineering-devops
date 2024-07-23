@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# A script to configure the server so that the passworf wont work again
-echo '^[^#]+[PasswordAuthentication no]' > ~/.ssh/ssh_config
+# A script to show my configuration file
+# IdentityFile ~/.ssh/school
+# PasswordAuthentication no
