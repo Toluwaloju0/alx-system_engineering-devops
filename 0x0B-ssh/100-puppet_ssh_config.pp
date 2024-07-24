@@ -4,6 +4,6 @@ $str = "PasswordAuthentication no
   "
 file { 'ssh_config':
   ensure => 'present',
-  path     => '~/.ssh/ssh_config',
+  path     => '/etc/ssh/ssh_config',
   content => $str,
 }
