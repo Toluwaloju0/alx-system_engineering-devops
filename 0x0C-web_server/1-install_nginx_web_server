@@ -2,6 +2,9 @@
 # a script to install nginx and set it up
 apt update
 apt-get -y install nginx
+apt-get -y install systemctl
+apt-get -y install ufw
+systemctl start nginx
+syatemctl enable nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
-curl localhost
