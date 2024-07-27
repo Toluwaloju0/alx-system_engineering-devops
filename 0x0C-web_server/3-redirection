@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A sxript to configure an ubuntu server to redirect a page
+sed -i "s/80/8080/" /etc/nginx/sites-available/default
+redirect="server_name redirect_me;\n\treturn 301 www.google.com;"
+sed -i "s/server_name _;/$redirect/" /etc/nginx/sites-available/default
