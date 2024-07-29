@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A script to debug a web problem
+apt-get -y install apache
