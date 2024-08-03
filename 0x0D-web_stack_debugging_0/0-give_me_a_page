@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 # A script to debug a web problem
-apt-get -y install apache
+apt update
+apt -y upgrade
+apt-get -y install ufw
+apt-get -y install systemctl
+apt -y install apache2
+ufw allow 'Apache'
+mkdir -p /var/www/html
+echo "Hello Holberton" > /var/www/html/index.html
