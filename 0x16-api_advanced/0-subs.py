@@ -2,8 +2,8 @@
 """A module to get the api of reddit"""
 
 
-import requests
 import json
+import requests
 
 
 def number_of_subscribers(subreddit):
