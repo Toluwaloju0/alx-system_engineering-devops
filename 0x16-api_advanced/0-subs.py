@@ -2,7 +2,6 @@
 """A module to get the api of reddit"""
 
 
-import json
 import requests
 
 
@@ -17,8 +16,8 @@ def number_of_subscribers(subreddit):
     }
 
     url = "https://api.reddit.com/r/{}/about".format(subreddit)
-    reddit = requests.get(url, headers=headers)
-    if reddit.url != url or reddit.status_code != 200:
+    reddit = requests.get(url, headers=headers, allow_redirects=False)
+    if reddit.status_code != 200:
         return 0
     data = reddit.json()
 
