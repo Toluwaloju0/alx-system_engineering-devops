@@ -11,8 +11,13 @@ def number_of_subscribers(subreddit):
     Args:
         subreddit: The reddit page
     """
+
+    headers = {
+        'User-Agent': "Mozilla/5.0"
+    }
+
     url = "https://api.reddit.com/r/{}/about".format(subreddit)
-    reddit = requests.get(url)
+    reddit = requests.get(url, headers=headers)
     if reddit.url != url or reddit.status_code != 200:
         return 0
     data = reddit.json()
