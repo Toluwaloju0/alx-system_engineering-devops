@@ -4,6 +4,7 @@
 
 import requests
 
+
 def recurse(subreddit, hot_list=[]):
     """A function to query an api
     Args:
@@ -19,7 +20,8 @@ def recurse(subreddit, hot_list=[]):
         return None
     data = reddit.json()
     try:
-        hot_list.append(data['data']['children'][len(hot_list)]['data']['title'])
+        hot_list.append(data['data']['children'][len(hot_list)]['da\
+ta']['title'])
         return recurse(subreddit, hot_list=hot_list)
     except IndexError:
         return hot_list
