@@ -6,7 +6,7 @@ import requests
 
 
 def top_ten(subreddit):
-    url = "http://api.reddit.com/r/{}/hot".format(subreddit)
+    url = "https://api.reddit.com/r/{}/hot".format(subreddit)
 
     reddit = requests.get(url, allow_redirects=False)
     if reddit.status_code != 200:

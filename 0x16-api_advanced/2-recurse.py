@@ -11,8 +11,10 @@ def recurse(subreddit, hot_list=[]):
         hot_list: A list containing hot articles in the subreddit
     """
 
-    url = "http://api.reddit.com/r/{}/top".format(subreddit)
-    reddit = requests.get(url, allow_redirects=False)
+    url = "https://api.reddit.com/r/{}/top".format(subreddit)
+    headers = {'User-Agent': "Mozilla/5.0"}
+
+    reddit = requests.get(url, headers=headers, allow_redirects=False)
     if reddit.status_code != 200:
         return None
     data = reddit.json()
