@@ -5,7 +5,7 @@ apt -y upgrade
 apt -y install systemctl
 apt -y install ufw
 apt -y install haproxy
-backend="backend web-server\n\tbalance roundrobin\n\tserver web1 100.25.22.54:80 check\n\tserver web2 100.25.158.175:80 check"
+backend="backend web-server\n\tbalance roundrobin\n\tserver web1 54.152.6.186:80 check\n\tserver web2 35.153.51.170:80 check"
 frontend="frontend http\n\tbind *:80\n\tmode http\n\n\tdefault_backend web-server"
 sed -i "$ a $frontend" /etc/haproxy/haproxy.cfg
 sed -i "$ a $backend" /etc/haproxy/haproxy.cfg

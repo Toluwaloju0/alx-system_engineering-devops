@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script to change the name of a computer
+sed -i "/127.0.0.1/ a $1" /etc/hosts
+hostnamectl set-hostname "$1"

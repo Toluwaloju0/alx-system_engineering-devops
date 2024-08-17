@@ -18,5 +18,5 @@ def top_ten(subreddit):
     try:
         for a in range(10):
             print(data['data']['children'][a]['data']['title'])
-    except (IndexError, ValueError, requests.JSONDecodeError):
-        return
+    except (IndexError, ValueError):
+        raise
