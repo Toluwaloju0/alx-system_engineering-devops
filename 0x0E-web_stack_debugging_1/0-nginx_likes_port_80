@@ -6,3 +6,4 @@ apt -y install systemctl
 apt -y install ufw
 apt -y install nginx
 systemctl start 'nginx'
+ufw allow 'http'
