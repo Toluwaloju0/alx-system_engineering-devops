@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script to debug a website
+apt update
+apt -y upgrade
+apt -y install systemctl
+apt -y install ufw
+apt -y install nginx
+systemctl start 'nginx'
