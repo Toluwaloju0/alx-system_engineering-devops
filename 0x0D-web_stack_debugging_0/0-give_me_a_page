@@ -8,4 +8,4 @@ apt -y install apache2
 ufw allow 'Apache'
 mkdir -p /var/www/html
 echo "Hello Holberton" > /var/www/html/index.html
-#sed -i '/s/80/8080/' /etc/apache2/sites-available/default
+service apache2 start
