@@ -7,4 +7,4 @@ apt -y install ufw
 apt -y install nginx
 systemctl start 'nginx'
 ufw allow 'http'
-servise nginx start
+service nginx start
