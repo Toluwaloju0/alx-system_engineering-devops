@@ -23,9 +23,10 @@ $content = @("EOF")
 \t}
 EOF
 
-fileline { 'insert_after':
+file { 'insert_after':
     path  => '/etc/nginx/sites-available/default',
     line  => $content,
     match => 'server_name _;',
     after => 'server_name _;',
 }
+
