@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# a script to create a database backup and archive it
+mysql -uroot -p"$1" -A > backup.sql
+date=$(date +"%d-%m-%Y")
+archive="${date}.tar.gz"
+tar -czf "$archive" backup.sql
