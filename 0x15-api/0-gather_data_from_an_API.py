@@ -30,8 +30,10 @@ def get_task(url):
 
 
 if __name__ == '__main__':
+    # define the urls
     url_user = f"https://jsonplaceholder.typicode.com/users/{argv[1]}"
     url_task = f"https://jsonplaceholder.typicode.com/todos?userId={argv[1]}"
+    # get the relevant data
     e_name = get_name(url_user)
     comp, total, tasks = get_task(url_task)
 
