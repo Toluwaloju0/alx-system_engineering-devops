@@ -9,7 +9,7 @@ def get_name(url):
     """To get the name of the user"""
     response = requests.get(url)
     response = response.json()
-    return response['name']
+    return response.get('name')
 
 
 def get_task(url):
@@ -22,7 +22,7 @@ def get_task(url):
     # Get the completed tasks and total number of tasks
     for a in response:
         total += 1
-        if a['completed']:
+        if a.get('completed'):
             comp += 1
             comp_list.append(a['title'])
     # Return a tuble containing the completed, total and names of task
