@@ -10,7 +10,7 @@ def get_name(url):
     """To get the name of the user"""
     response = requests.get(url)
     response = response.json()
-    return response.get('username'), response.get('id')
+    return response.get('username')
 
 
 def get_task(url):
@@ -28,22 +28,22 @@ def get_task(url):
 
 if __name__ == '__main__':
     mydict = {}
-    for a in range(11):
+    for a in range(1, 11):
         # define the urls
         url_user = f"https://jsonplaceholder.typicode.com/users/{a}"
         url_task = f"https://jsonplaceholder.typicode.com/todos?userId={a}"
         # get the relevant data
-        u_name, u_id = get_name(url_user)
+        u_name = get_name(url_user)
         tasks = get_task(url_task)
 
         # create the dictionary
         mydict[a] = []
         for task in tasks:
             mydict[a].append({
+                'username': u_name,
                 'task': task[1],
-                'completed': task[0],
-                'username': u_name}
+                'completed': task[0]}
             )
     # save the output to a file
-    with open(f"todo_all_employees.json", mode='a', encoding='utf-8') as File:
-            File.write(dumps(mydict))
+    with open(f"todo_all_employees.json", mode='w', encoding='utf-8') as File:
+        File.write(dumps(mydict))
