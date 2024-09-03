@@ -36,8 +36,10 @@ if __name__ == '__main__':
     tasks = get_task(url_task)
 
     # save the output to a file
-    for task in tasks:
-        mylist = [u_id, u_name, task[0], task[1]]
-        with open(f"{argv[1]}.csv", mode='a', encoding='utf-8') as File:
-            csvwriter = csv.writer(File)
+    with open(f"{argv[1]}.csv", mode='a', encoding='utf-8') as File:
+        csvwriter = csv.writer(File, quotechar='"', quoting=csv.QUOTE_ALL)
+
+        for task in tasks:
+            mylist = [u_id, u_name, task[0], task[1]]
+
             csvwriter.writerow(mylist)
