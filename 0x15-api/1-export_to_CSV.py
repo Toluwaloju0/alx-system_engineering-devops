@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Amodule to query an api and return a csv file"""
 
+import csv
 import requests
 from sys import argv
 from json import dumps
@@ -37,6 +38,6 @@ if __name__ == '__main__':
     # save the output to a file
     for task in tasks:
         mylist = [u_id, u_name, task[0], task[1]]
-        print(mylist)
         with open(f"{argv[1]}.csv", mode='a', encoding='utf-8') as File:
-            File.write(dumps(mylist))
+            csvwriter = csv.writer(File)
+            csvwriter.writerow(mylist)
